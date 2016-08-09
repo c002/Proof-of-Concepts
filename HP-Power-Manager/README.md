@@ -41,3 +41,4 @@ Useful Notes:
 egghunter : haha  
 badchars : \x00  
 
+Tested and working on Windows XP, and Windows 7
