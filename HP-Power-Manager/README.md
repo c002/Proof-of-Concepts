@@ -6,8 +6,8 @@
     [+] Trying to connect to target
     [+] Please wait to thirty seconds...
 
-    Microsoft Windows XP [Version 5.1.2600]
-    (C) Copyright 1985-2001 Microsoft Corp.
+    Microsoft Windows [Version 6.1.7601]
+    Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
 
     C:\WINDOWS\system32>
 
