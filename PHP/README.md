@@ -17,7 +17,7 @@ I highly suggest reading as he has very interesting work :)
 
 Thought it would be awesome to see how he did it and learned a few things along the way as I have never done it to anything PHP. This was pretty interesting to say the least in making it work :)
 
-So what I used were: 
-1. 0x1017c6af : call esp
-2. Bad chars were: 0x00 and 0x5c
-3. Payload is 371 bytes. It's a reverse shell so it only works for me ;)
+So what I used were:  
+1. 0x1017c6af : call esp    
+2. Bad chars were: 0x00 and 0x5c    
+3. Payload is 371 bytes. It's a reverse shell so it only works for me ;)    
