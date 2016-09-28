@@ -11,7 +11,7 @@
 
     C:\Users\IEUser\Desktop>
 
-Came across an exploit that was found by Yakir Wizman, which you can find here: 
+Came across an exploit that was found by Yakir Wizman, which you can find here:     
 http://www.black-rose.ml/2016/09/exploiting-php-for-fun-and-non-profit.html  
 I highly suggest reading as he has very interesting work :)
 
