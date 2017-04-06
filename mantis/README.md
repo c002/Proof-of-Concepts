@@ -16,3 +16,5 @@ Just spawn a pty and you should be golden
 # Requirements
 Also, this is using a reverse shell. 
 So make sure that you have apache2 running because it will grab it from you    
+You can use one from msfvenom:    
+msfvenom -p payload -f elf etc etc etcccc
